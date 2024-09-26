@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-	QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-	YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>E-Med Connect</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/images/logo2.png" type="image/png">
+
+    <style>
+        .search-bar {
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+        }
+        .ulist {
+            list-style-type: none;
+            padding: 0;
+        }
+        .listi {
+            margin: 5px 0;
+            display: none; /* Hide all items initially */
+        }
+        .no-results {
+            display: none;
+            color: red;
+            font-style: italic;
+        }
+        .empty-search {
+            display: none;
+            color: orange;
+            font-style: italic;
+        }
+        button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/images/logo.png" alt="" width=30%>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+	    <script>
+ 		 // Toggle menu function
+ 		 function toggleMenu() {
+ 		   var menu = document.getElementById("mobileMenu");
+		    if (menu.style.display === "block") {
+		      menu.style.display = "none";  // Close the menu
+		    } else {
+		      menu.style.display = "block";  // Open the menu
+		    }
+		  }
+	     </script>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Connections</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#team">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#search">Prescription</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#future">Plans</a>
+                    </li>
+                </ul>
+                <a href="#contact" class="btn btn-brand ms-lg-3">Schedule Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero" class="min-vh-100 d-flex align-items-center text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 data-aos="fade-left" class="text-uppercase text-white fw-semibold display-1">Welcome to Your Virtual Health Partner</h1>
+                    <h5 class="text-white mt-3 mb-4" data-aos="fade-right">Access medical consultations from the comfort of your home</h5>
+                    <div data-aos="fade-up" data-aos-delay="50">
+                        <a href="#contact" class="btn btn-brand me-2">Schedule Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="50">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">About us</h1>
+                        <div class="line"></div>
+                        <p>E-Med Connect bridges the gap between patients and healthcare providers through seamless, secure digital solutions, ensuring accessible and quality healthcare for everyone</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-6" data-aos="fade-down" data-aos-delay="50">
+                    <img src="./assets/images/about.png" alt="">
+                </div>
+                <div data-aos="fade-down" data-aos-delay="150" class="col-lg-5">
+                    <h1>About E-Med Connect</h1>
+                    <p class="mt-3 mb-4">Our platform seamlessly bridges the gap between patients and healthcare professionals, making quality medical care accessible, affordable, and convenient.</p>
+                    <div class="d-flex pt-4 mb-3">
+                        <div class="iconbox me-4">
+                            <img src="./assets/images/quest.png" alt="">
+                        </div>
+                        <div>
+                            <h5>Our Mission</h5>
+                            <p>To empower individuals with the tools and resources needed to manage their health effectively.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <div class="iconbox me-4">
+                            <img src="./assets/images/online.png" alt="">
+                        </div>
+                        <div>
+                            <h5>What We Offer</h5>
+                            <p>Doctors On-Demand: Need to see a doctor? Just a few clicks and you’re connected with a healthcare professional who’s ready to help.</p>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="iconbox me-4">
+                            <img src="./assets/images/doctor.png" alt="">
+                        </div>
+                        <div>
+                            <h5>Why Choose E-Med Connect?</h5>
+                            <p>Qualified Professionals: We have a network of certified and experienced healthcare providers who are committed to delivering the highest quality care.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section-padding border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">Our Services</h1>
+                        <div class="line"></div>
+                        <p>At E-Med Connect, we provide a range of telemedicine services to help you manage your health from the comfort of your home. Our platform ensures that you receive professional healthcare advice without the need to visit a clinic in person.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-lg-6 col-sm-6" data-aos="fade-down" data-aos-delay="150">
+                    <div class="service theme-shadow p-lg-5 p-4">
+                        <div class="iconbox">
+                            <img src="./assets/images/Virtual.png" alt="">
+                        </div>
+                        <h5 class="mt-4 mb-3">Virtual Consultations</h5>
+                        <p>Get in touch with experienced healthcare professionals through secure video calls. Discuss your symptoms, receive diagnoses, and get personalized treatment plans, all through a convenient virtual meeting.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6" data-aos="fade-down" data-aos-delay="350">
+                    <div class="service theme-shadow p-lg-5 p-4">
+                        <div class="iconbox">
+                            <img src="./assets/images/Prescription.png" alt="">
+                        </div>
+                        <h5 class="mt-4 mb-3">Prescription Services</h5>
+                        <p>After your consultation, our doctors can prescribe medications electronically. The prescriptions will have the best recommended pharmacy to buy your medications online.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Connections -->
+    <section id="portfolio" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">Our Connections</h1>
+                        <div class="line"></div>
+                        <p>Some of the many well-known hospitals which we plan to have connections with.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+                    <div class="portfolio-item image-zoom">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/lakeshore.jpg" alt="">
+                        </div>
+                        <a href="./assets/images/lakeshore.jpg" data-fancybox="gallery" class="iconbox"><i class="ri-search-2-line"></i></a>
+                    </div>
+                    <div class="portfolio-item image-zoom mt-4">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/aster.jpg" alt="">
+                        </div>
+                        <a href="./assets/images/aster.jpg" data-fancybox="gallery" class="iconbox"><i class="ri-search-2-line"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="250">
+                    <div class="portfolio-item image-zoom">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/apollo.jpg" alt="">
+                        </div>
+                        <a href="./assets/images/apollo.jpg" data-fancybox="gallery" class="iconbox"><i class="ri-search-2-line"></i></a>
+                    </div>
+                    <div class="portfolio-item image-zoom mt-4">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/emc.jpg" alt="">
+                        </div>
+                        <a href="./assets/images/emc.jpg" data-fancybox="gallery" class="iconbox"><i class="ri-search-2-line"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="350">
+                    <div class="portfolio-item image-zoom">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/rajagiri.jpg" alt="">
+                        </div>
+                        <a href="./assets/images/rajagiri.jpg" data-fancybox="gallery" class="iconbox"><i class="ri-search-2-line"></i></a>
+                    </div>
+                    <div class="portfolio-item image-zoom mt-4">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/ayur.png" alt="">
+                        </div>
+                        <a href="./assets/images/ayur.png" data-fancybox="gallery" class="iconbox"><i class="ri-search-2-line"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">Team Members</h1>
+                        <div class="line"></div>
+                        <p>We love to craft digital experiances for brands rather than crap and more lorem ipsums and do crazy skills</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 text-center ">
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+                    <div class="team-member image-zoom">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/person-1.jpg" alt="">
+                        </div>
+                        <div class="team-member-content">
+                            <h4 class="text-white">Rishaan Bipin</h4>
+                            <p class="mb-0 text-white">Member</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="250">
+                    <div class="team-member image-zoom">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/person-2.jpg" alt="">
+                        </div>
+                        <div class="team-member-content">
+                            <h4 class="text-white">Neil Manoj</h4>
+                            <p class="mb-0 text-white">Member</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="350">
+                    <div class="team-member image-zoom">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/person-3.jpg" alt="">
+                        </div>
+                        <div class="team-member-content">
+                            <h4 class="text-white">Deion Antony</h4>
+                            <p class="mb-0 text-white">Member</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                </div>
+
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="350">
+                    <div class="team-member image-zoom">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/person-1.jpg" alt="">
+                        </div>
+                        <div class="team-member-content">
+                            <h4 class="text-white">Roshan Sam</h4>
+                            <p class="mb-0 text-white">Member</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="350">
+                    <div class="team-member image-zoom">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/person-3.jpg" alt="">
+                        </div>
+                        <div class="team-member-content">
+                            <h4 class="text-white">Johan P Manoj</h4>
+                            <p class="mb-0 text-white">Editor</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule -->
+    <section class="section-padding bg-light" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+                    <div class="section-title">
+                        <h1 class="display-4 text-white fw-semibold">Schedule Your Reservation</h1>
+                        <div class="line bg-white"></div>
+                        <p class="text-white">Please schedule your reservation</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center" data-aos="fade-down" data-aos-delay="250">
+                <div class="col-lg-8">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="row g-3 p-lg-5 p-4 bg-white theme-shadow">
+		    <input type="hidden" name="access_key" value="54f643c3-22fe-4491-a7b1-552397310fbf">
+                        <div class="form-group col-lg-6">
+                            <input type="text" class="form-control" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <input type="text" class="form-control" name="phone" placeholder="Enter phone number" required>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <input type="email" class="form-control" name="email" placeholder="Enter Email address" required>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <input type="date" class="form-control" name="date" required>
+                        </div>
+                        <div class="form-group col-lg-12">
+                            <textarea rows="5" class="form-control" name="nature_time" placeholder="Enter Nature of Illness and Preffered Time" required></textarea>
+                        </div>
+
+	<input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <div class="form-group col-lg-12 d-grid">
+			<button type="submit" class="btn btn-primary">Request for appointment</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRESCRIPTION -->
+    <section id="search" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="50">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">Get Your Prescription</h1>
+                        <div class="line"></div>
+                        <p>After your virtual consultation, our licensed physicians can prescribe the necessary medications and can be obtained by using the provided patient id.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-between align-items-center">
+                <div class="col-lg-6" data-aos="fade-down" data-aos-delay="50">
+                    <img src="./assets/images/search.png" alt="">
+                </div>
+                <div data-aos="fade-down" data-aos-delay="150" class="col-lg-5">
+                    <h1>Search For Your Prescription</h1>
+                    <p class="mt-3 mb-4">Enter your patient id provided by the doctor. Make sure to use all captital letters. If your id is not found, please double-check and contact your appointed doctor.</p>
+                    <div class="d-flex pt-4 mb-3">
+                        <div>
+			    <div class="search-bar">
+				<input type="text" id="searchInput" placeholder="Enter your patient id">
+				<button class="btn btn-primary" onclick="searchFiles()">Search</button>
+			    </div>
+				<p class="empty-search" id="emptySearch">Please enter your patient id!</p>
+				<p class="no-results" id="noResults">Patient ID Not Found. Please Double-Check.</p>
+			
+				<!-- File Links -->
+				<ul class="ulist" id="fileList">
+				        <li class="listi"><a href="./assets/prescriptions/01234.pdf" target="_blank">ID: 01234</a></li>
+				        <li class="listi"><a href="./assets/prescriptions/12345.pdf" target="_blank">ID: 12345</a></li>
+				        <li class="listi"><a href="./assets/prescriptions/30119.pdf" target="_blank">ID: 30119</a></li>
+				        <li class="listi"><a href="./assets/prescriptions/54321.pdf" target="_blank">ID: 54321</a></li>
+				        <li class="listi"><a href="./assets/prescriptions/67890.pdf" target="_blank">ID: 67890</a></li>
+				</ul>
+
+			    <script>
+			        function searchFiles() {
+			            // Get search input and filter it
+			            var input = document.getElementById('searchInput');
+			            var filter = input.value.toUpperCase().trim();
+			            var ul = document.getElementById("fileList");
+			            var li = ul.getElementsByTagName('li');
+			            var noResults = document.getElementById("noResults");
+			            var emptySearch = document.getElementById("emptySearch");
+			            var visibleCount = 0;
+			
+			            // Check if the input is empty and display a message
+			            if (filter === "") {
+			                emptySearch.style.display = "block";  // Show message to type something
+			                noResults.style.display = "none";  // Hide 'no results' message if shown
+			                for (var i = 0; i < li.length; i++) {
+			                    li[i].style.display = "none";  // Hide all list items
+			                }
+			                return;  // Stop the function if no input
+			            } else {
+			                emptySearch.style.display = "none";  // Hide the empty search message
+			            }
+
+			            // Loop through all list items, and show only those that match the search query
+			            for (var i = 0; i < li.length; i++) {
+			                var a = li[i].getElementsByTagName("a")[0];
+			                var txtValue = a.textContent || a.innerText;
+			
+			                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+			                    li[i].style.display = "list-item";  // Show the matching item
+			                    visibleCount++;  // Count visible items
+			                } else {
+			                    li[i].style.display = "none";  // Hide the non-matching item
+			                }
+			            }
+
+			            // If no files are visible, show "No files found."
+			            if (visibleCount === 0) {
+			                noResults.style.display = "block";
+			            } else {
+			                noResults.style.display = "none";
+			            }
+			        }
+			    </script>
+
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PLANS -->
+    <section id="future" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-down" data-aos-delay="150">
+                    <div class="section-title">
+                        <h1 class="display-4 fw-semibold">Our Future Plans</h1>
+                        <div class="line"></div>
+                        <p>E-Med plans to enhance our platform with advanced telemedicine tools, expand our provider network, and implement AI-driven health solutions for better care.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="150">
+                    <div class="team-member image-zoom">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/smartwatch.jpeg" alt="">
+                        </div>
+                        <h5 class="mt-4">Smart Watches</h5>
+                        <p>Smartwatches can enhance telemedicine by providing real-time health data like heart rate, sleep patterns, and physical activity, enabling remote monitoring and early detection of health issues. This allows healthcare providers to offer timely interventions and personalized care plans without in-person visits.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="250">
+                    <div class="team-member image-zoom">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/ai.jpg" alt="">
+                        </div>
+                        <h5 class="mt-4">AI and Machine Learning</h5>
+                        <p>AI can assist in diagnosing conditions, predicting outcomes, and personalizing treatment plans.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-down" data-aos-delay="350">
+                    <div class="team-member image-zoom">
+                        <div class="image-zoom-wrapper">
+                            <img src="./assets/images/arvr.jpeg" alt="">
+                        </div>
+                        <h5 class="mt-4">Augmented Reality (AR) and Virtual Reality (VR)</h5>
+                        <p>Augmented Reality can facilitate remote training, therapy, and even virtual examinations without being concerned about the disease being spread to the doctor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-3 col-sm-6">
+                        <a href="#"><img src="./assets/images/logo2.png" alt="" width=40%></a>
+                        <div class="line"></div>
+                        <p>E-Med Connect simplifies access to quality healthcare through secure digital solutions.</p>
+                        <div class="social-icons">
+                            <a href="https://github.com/FakeDoc1"><i class="ri-github-fill"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <h5 class="mb-0 text-white">SERVICES</h5>
+                        <div class="line"></div>
+                        <ul>
+                            <li><a href="#contact">Instant Appointment</a></li>
+                            <li><a href="#search">Online Prescription</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <h5 class="mb-0 text-white">ABOUT</h5>
+                        <div class="line"></div>
+                        <ul>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#hero">Company</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <h5 class="mb-0 text-white">CONTACT</h5>
+                        <div class="line"></div>
+                        <ul>
+                            <li>Toc H Public School, Vytilla</li>
+                            <li>Kochi- 682 019</li>
+                            <li>Kerala, India</li>
+                            <li>www.tochchool.org.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row g-4 justify-content-between">
+                    <div class="col-auto">
+                        <p class="mb-0">© Copyright E-Med Connect. All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
